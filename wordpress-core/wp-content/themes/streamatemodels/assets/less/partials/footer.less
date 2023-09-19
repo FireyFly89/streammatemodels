@@ -1,0 +1,115 @@
+.site__footer {
+  .wrapper();
+  text-align: center;
+  
+  &__wrap {
+    padding-top: 40px;
+    padding-bottom: 25px;
+    background: @color__main__light;
+    
+    @media @query-min-mediumDevice {
+      padding-top: 30px;
+      padding-bottom: 45px;
+    }
+  }
+  
+  &__logo {
+    margin-bottom: 10px;
+    
+    @media @query-min-mediumDevice {
+      margin-bottom: 20px;
+    }
+    
+    img {
+      width: 50px;
+      height: 50px;
+      
+      @media @query-min-mediumDevice {
+        width: 70px;
+        height: 70px;
+      }
+    }
+    
+  }
+  
+  &__content {
+    color: white;
+    margin-bottom: 10px;
+    
+    @media @query-min-mediumDevice {
+      margin-bottom: 20px;
+    }
+    
+    p {
+      font-size: 13px;
+      line-height: 15px;
+      
+      @media @query-min-mediumDevice {
+        font-size: 16px;
+        line-height: 18px;
+      }
+      
+    }
+  }
+  
+  &__nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    
+    li {
+      margin: 0 2.5px;
+      color: white;
+      font-size: 13px;
+      line-height: 15px;
+      
+      &:not(:last-of-type) {
+        &:after {
+          content: '|';
+          margin-left: 5px;
+        }
+      }
+      
+      @media @query-min-mediumDevice {
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+    
+    a {
+      color: white;
+      text-decoration: none;
+      transition: color @transition-fast-ease;
+      
+      &:hover {
+        color: @color__main__dark;
+      }
+    }
+  }
+
+  &__social-links {
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    a {
+      display: inline-flex;
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      border: 1px solid white;
+      border-radius: 50%;
+
+      @media @query-min-mediumDevice {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        border: 2px solid white;
+      }
+    }
+  }
+}

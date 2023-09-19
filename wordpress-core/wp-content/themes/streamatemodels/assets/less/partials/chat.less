@@ -1,0 +1,20 @@
+.chat {
+  padding-top: 23px;
+
+  @media @query-min-smallDevice {
+    padding-top: 50px;
+  }
+
+  #multichat-chat-box {
+    position: relative;
+    min-height: 85vh;
+
+    @media @query-min-smallDevice {
+      min-height: 90vh;
+    }
+
+    iframe {
+      .innerBox();
+    }
+  }
+}

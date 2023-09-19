@@ -1,0 +1,31 @@
+.sls-plugin-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+}
+
+.sls-plugin-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.sls-plugin-form label:not(:first-of-type) {
+    margin-top: 15px;
+}
+
+.sls-plugin-form button.page-title-action {
+    display: block;
+    margin: 20px 0 0 0;
+}
+
+.page-title-action + form {
+    margin-top: 15px;
+}
+
+.page-title-action ~ .page-title-action,
+.page-title-action ~ .page-title-action:active {
+    top: 20px;
+    margin: 0;
+}

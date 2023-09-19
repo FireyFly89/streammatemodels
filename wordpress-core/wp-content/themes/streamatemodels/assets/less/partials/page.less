@@ -1,0 +1,60 @@
+.page {
+  &-single {
+    .wrapper();
+    display: flex;
+    flex-wrap: wrap;
+    padding: 95px 0 0;
+
+    @media @query-min-smallDevice {
+      padding-top: 130px;
+    }
+
+    @media @query-min-largeDevice {
+      padding-bottom: 110px;
+    }
+  }
+
+  &__content {
+    .wrapper();
+    .articleSpacing;
+    .articleLists;
+    .articleBlockquote;
+
+    &__wrap {
+      padding-top: 100px;
+      padding-bottom: 65px;
+      min-height: 100vh;
+      background-color: @color__main__verylight;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px
+    }
+
+    h2 {
+      margin-top: 40px;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    figure {
+      margin: 40px 0;
+
+      &.wp-block-image {
+        position: relative;
+        height: 60vh;
+        min-height: 280px;
+        overflow: hidden;
+
+        img {
+          .innerBox();
+          object-fit: cover;
+          object-position: top center;
+        }
+      }
+    }
+  }
+}

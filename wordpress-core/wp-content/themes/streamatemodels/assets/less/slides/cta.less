@@ -1,0 +1,40 @@
+.cta {
+  background: @color__main__light;
+  color: white;
+
+  &__wrap {
+    .wrapper();
+    position: relative;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+
+    @media @query-min-mediumDevice {
+      font-size: 30px;
+      line-height: 37px;
+    }
+  }
+
+  a {
+    position: absolute;
+    bottom: -23px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 88%;
+    text-align: center;
+    margin: 0 auto;
+
+    @media @query-min-extraSmallDevice {
+      width: auto;
+    }
+
+    &:hover {
+      transform: translateX(-50%) scale(1.025);
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.conduct-content {
+  position: relative;
+  width: 100%;
+  margin: 120px auto 80px auto;
+  padding: 0 15px;
+  color: #555;
+
+  @media @query-min-smallDevice {
+    width: 750px;
+  }
+
+  @media @query-min-mediumDevice {
+    width: 970px;
+  }
+
+  @media @query-min-largeDevice {
+    width: 1170px;
+  }
+
+  &-heading {
+    text-align: center;
+
+    h2 {
+      padding: 0 15px;
+      font-size: 26px;
+      letter-spacing: 3px;
+
+      @media @query-min-smallDevice {
+        font-size: 30px;
+      }
+    }
+
+    p {
+      margin-bottom: 30px;
+      text-align: left;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .fa {
+      font-weight: normal;
+    }
+
+    span {
+      display: block;
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: 300;
+      color: #777;
+      line-height: 1.5;
+
+      @media @query-min-smallDevice {
+        font-size: 22px;
+      }
+    }
+
+    span:nth-of-type(2) {
+      font-size: 14px;
+    }
+
+    span:nth-of-type(2)::after {
+      content: '';
+      display: block;
+      width: 40px;
+      margin: 30px auto 30px auto;
+      border-top: 2px solid @color__main__light;
+    }
+  }
+
+  &-text {
+    &--title {
+      position: relative;
+      margin-bottom: 30px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 0;
+        border-top: 1px solid @color__main__light;
+        left: auto;
+        top: 50%;
+        right: 0;
+      }
+    }
+
+    h3 {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      padding-right: 15px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+      background-color: @color__body__bg;
+
+      @media @query-min-smallDevice {
+        font-size: 24px;
+      }
+    }
+
+    p {
+      margin-bottom: 30px;
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 1.8;
+    }
+  }
+}

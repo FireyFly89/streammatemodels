@@ -1,0 +1,117 @@
+.work-with-us {
+  background: @color__main__dark;
+  position: relative;
+  padding: 50px 0 0;
+
+  @media @query-min-mediumDevice {
+    padding: 50px 50px 0;
+  }
+
+  &__wrap {
+    .wrapper(@display: flex;);
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-left: 0;
+    padding-right: 0;
+
+    @media @query-min-mediumDevice {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    flex-basis: 100%;
+
+    @media @query-min-mediumDevice {
+      position: absolute;
+      z-index: 0;
+      top: 90px;
+      left: 0;
+      max-width: 50%;
+      max-height: 100%;
+      height: 90%;
+    }
+
+    &:before {
+      content: '';
+      .innerBox(@zindex: 1);
+      background: rgba(@color__main__dark, .47);
+    }
+
+    img {
+      .imgCover();
+      height: 512px;
+      object-position: right;
+
+      @media @query-min-mediumDevice {
+        height: 100%;
+        object-position: 70% 0%;
+      }
+
+      @media @query-min-largeDevice {
+        object-position: right;
+      }
+    }
+  }
+
+  &__content {
+    flex-basis: 100%;
+    padding: 0 20px 50px;
+    color: white;
+
+    @media @query-min-mediumDevice {
+      flex-basis: 50%;
+      padding: 50px 0 100px 50px;
+    }
+
+    @media @query-min-largeDevice {
+      padding: 50px 50px 215px 60px;
+    }
+
+    @media @query-min-hdReady {
+      padding: 80px 0 215px 95px;
+    }
+
+    &__item {
+      margin-bottom: 30px;
+
+      @media @query-min-mediumDevice {
+        &:not(:last-of-type) {
+          margin-bottom: 80px;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 45px;
+      margin-bottom: 40px;
+      text-align: center;
+
+      @media @query-min-mediumDevice {
+        text-align: left;
+        margin-bottom: 35px;
+      }
+
+      @media @query-min-hdReady {
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 45px;
+      }
+    }
+
+    h3 {
+      font-size: 17px;
+      line-height: 22px;
+      text-transform: uppercase;
+
+      @media @query-min-hdReady {
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+  }
+}

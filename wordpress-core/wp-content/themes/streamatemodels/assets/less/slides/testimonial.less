@@ -1,0 +1,132 @@
+@font-face {
+  font-family: Helvetica;
+  src: @font-helvetica;
+}
+
+.testimonial-section {
+  position: relative;
+  padding: 110px 32px 80px 32px;
+  color: #fff;
+  background-color: @color__main__dark;
+  font-family: Helvetica, sans-serif;
+
+  &__quotation {
+    &__left, &__right {
+      position: absolute;
+      font-size: 450px;
+      z-index: 2;
+    }
+
+    &__left {
+      top: -130px;
+      left: 0;
+    }
+
+    &__left:before {
+      content: "‘";
+    }
+
+    &__left:after {
+      content: "‘";
+      position: absolute;
+      left: 62px;
+    }
+
+    &__right {
+      bottom: -360px;
+      right: 0;
+    }
+
+    &__right:before {
+      content: "’";
+      position: absolute;
+      right: 62px;
+    }
+
+    &__right:after {
+      content: "’";
+    }
+
+    @media @query-min-mediumDevice {
+      &__left {
+        margin-right: 10vw;
+      }
+
+      &__right {
+        margin-left: 10vw;
+      }
+    }
+  }
+
+  &__text {
+    text-align: left;
+    font-size: 16px;
+    z-index: 2;
+
+    &__paragraph {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__image {
+    width: 125px;
+    z-index: 2;
+
+    &__name {
+      margin-top: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
+
+@media @query-min-smallDevice {
+
+  .testimonial-section {
+    padding: 45px 32px 55px 32px;
+
+    &__text {
+      font-size: 16px;
+      width: 35vw;
+    }
+
+    &__image {
+      width: 185px;
+      margin: 0 50px;
+    }
+
+    &__content {
+      display: flex !important;
+      flex-direction: row-reverse;
+      justify-content: center;
+      margin: 10px auto 30px auto;
+
+      &__wrapper {
+        max-width: 80vw;
+        margin: 0 auto;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: -45px;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: @color__main__light;
+          clip-path: polygon(55% 0, 5% 0, 20% 90%);
+        }
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: @color__main;
+      clip-path: polygon(55% 0%, 5% 0%, 41% 117%);
+    }
+  }
+}

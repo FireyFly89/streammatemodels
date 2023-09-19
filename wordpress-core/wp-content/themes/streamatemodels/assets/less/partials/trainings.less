@@ -1,0 +1,257 @@
+.trainings {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 95vw;
+  left: 5px;
+  bottom: 0;
+  z-index: 100;
+  color: white;
+  font-size: 12px;
+
+  &__tab {
+    height: auto;
+    padding: 10px;
+    background-color: @color__main;
+    box-shadow: 5px -5px 10px #00000029;
+    border-radius: 5px 5px 0px 0px;
+    text-align: center;
+    z-index: 99;
+    cursor: pointer;
+  }
+
+  &__wrapper {
+    display: none;
+    padding: 10px;
+    background-color: @color__main__light;
+    box-shadow: 5px -5px 10px #00000029;
+    text-align: left;
+    z-index: 98;
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      div& {
+        width: 100%;
+        padding: 6px 14px;
+        border: 2px solid white;
+      }
+
+      &__row {
+        display: inline-flex;
+
+        &__input[type="email"] {
+          width: 100%;
+          margin-top: 15px;
+          border: 2px solid white;
+          font-size: 10px;
+          border-radius: 5px;
+        }
+
+        .select2-container {
+          display: flex;
+          flex-direction: column-reverse;
+          width: 100% !important;
+          height: 32px;
+          margin-top: 15px;
+          padding: 0 12px;
+          background-color: @color__main__light;
+          border: 2px solid white;
+          border-radius: 5px;
+          color: white;
+          text-align: left;
+          font-size: 10px;
+          appearance: none !important;
+          -webkit-appearance: none;
+          list-style: none;
+          cursor: pointer;
+          outline: none;
+
+          &--default .select2-selection--single {
+            .select2-selection__arrow {
+              position: absolute;
+              height: 20px;
+              top: 49%;
+              right: 8px;
+              transform: translateY(-50%);
+              content: url("./assets/images/calendar.svg");
+            }
+
+            .select2-selection__rendered {
+              color: white;
+              padding-left: 0;
+              font-size: 12px;
+
+              @media @query-min-smallDevice {
+                font-size: 16px;
+              }
+            }
+          }
+
+          .select2-selection, #select2-dateList-container, #select2-timeList-container {
+            padding: 0;
+            background-color: @color__main__light;
+            color: white;
+            border: none;
+          }
+        }
+
+        .select2-container--default, .select2-container--below, .select2-container--focus, .selection:focus, .select2-selection:focus {
+          outline: none;
+        }
+      }
+
+      button {
+        width: 117px;
+        height: 35px;
+        margin-top: 15px;
+        padding: 6px 12px;
+        align-self: flex-end;
+        font-size: 10px;
+
+        &[disabled] {
+          background-color: #ccc;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    p a {
+      color: #009DFF;
+    }
+  }
+}
+
+.select2-container {
+  .select2-dropdown {
+    background-color: @color__main__light;
+    color: white;
+    border: 2px solid white;
+
+    .select2-search--dropdown {
+      display: none;
+    }
+
+    .select2-results__option[aria-selected=true] {
+      background-color: rgba(255, 255, 255, 0.75);
+      color: @color__main__light;
+    }
+
+    .select2-search__field, .select2-results__option:not([role=group]), .select2-results__option--highlighted {
+      &:hover {
+        background-color: @color__main;
+      }
+    }
+
+    .select2-container--default .select2-results > .select2-results__options {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+@media @query-min-oldDevice {
+  .trainings {
+    &__tab {
+      width: 252px;
+    }
+
+    &__wrapper {
+      border-radius: 0px 5px 0px 0px;
+    }
+  }
+}
+
+@media @query-min-extraSmallDevice {
+  .trainings {
+    left: 2.5vw;
+    font-size: 14px;
+
+    &__tab {
+      width: 290px;
+      padding: 10px;
+    }
+
+    &__wrapper {
+      padding: 10px;
+
+      .select2-container, &__form__row__input[type="email"], button {
+        font-size: 14px;
+      }
+
+      #dateList + .select2-container, #timeList + .select2-container {
+        .select2-selection__arrow {
+          top: 6px;
+        }
+      }
+    }
+  }
+}
+
+@media @query-min-smallDevice {
+  .trainings {
+    width: 382px;
+    left: 20px;
+    font-size: 16px;
+
+    &__tab {
+      width: 335px;
+      padding: 12px;
+    }
+
+    &__wrapper {
+      padding: 18px;
+
+      &__form {
+        width: 338px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        .select2-container, &__row__input[type="email"], button {
+          height: 35px;
+          font-size: 16px;
+        }
+
+        #dateList + .select2-container, #timeList + .select2-container {
+          .select2-selection__arrow {
+            top: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media @query-min-mediumDevice {
+  .trainings {
+    width: 482px;
+    left: 40px;
+
+    &__tab {
+      padding: 12px;
+    }
+
+    &__wrapper {
+      padding: 18px;
+
+      #dateList + .select2-container, #timeList + .select2-container {
+        .select2-selection__arrow {
+          top: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media @query-min-largeDevice {
+  .trainings {
+    left: 88px;
+
+    &__tab {
+      width: 337px;
+    }
+  }
+}

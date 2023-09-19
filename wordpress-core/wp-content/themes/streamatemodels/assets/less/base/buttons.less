@@ -1,0 +1,24 @@
+.btn {
+  &--main {
+    .btnMobile();
+    
+    @media @query-min-mediumDevice {
+      .btnDesktop();
+    }
+  }
+
+  &--blue {
+    .btnMobile(@color__blue);
+    
+    @media @query-min-mediumDevice {
+      .btnDesktop(@color__blue);
+    }
+  }
+}
+
+button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}

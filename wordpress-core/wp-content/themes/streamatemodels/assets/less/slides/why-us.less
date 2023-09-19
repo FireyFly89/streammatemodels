@@ -1,0 +1,113 @@
+.why-us {
+  color: white;
+  background: @color__main__dark;
+  padding-top: 105px;
+  padding-bottom: 140px;
+
+  @media @query-min-extraSmallDevice {
+    padding-bottom: 160px;
+  }
+
+  @media @query-min-smallDevice {
+    padding-top: 80px;
+  }
+
+  @media @query-min-largeDevice {
+    margin-bottom: 100px;
+  }
+
+  &__title {
+    .wrapper();
+    .sectionTitle();
+    text-align: center;
+    margin-bottom: 75px;
+
+    @media @query-min-smallDevice {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__content {
+    .wrapper();
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+
+  &__item {
+    flex-basis: 100%;
+    margin-bottom: 60px;
+
+    @media @query-min-smallDevice {
+      flex-basis: 31%;
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      min-height: 36px;
+
+      @media @query-min-smallDevice {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__img {
+      flex-basis: 100%;
+      text-align: center;
+      margin-bottom: 40px;
+
+      @media @query-min-extraSmallDevice {
+        flex-basis: 50%;
+      }
+
+      @media @query-min-smallDevice {
+        margin-bottom: 0;
+      }
+
+      @media @query-min-mediumDevice {
+        flex-basis: 25%;
+      }
+
+      p:not(.why-us__stats) {
+        font-size: 11px;
+        line-height: 12px;
+        text-transform: uppercase;
+
+        @media @query-min-extraSmallDevice {
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__img {
+    max-width: 115px;
+    max-height: 115px;
+    margin: 0 auto;
+
+    @media @query-min-smallDevice {
+      max-width: 150px;
+      max-height: 150px;
+    }
+  }
+
+  &__stats {
+    font-size: 75px;
+    line-height: 89px;
+
+    @media @query-min-smallDevice {
+      font-size: 100px;
+      line-height: 120px;
+    }
+  }
+}

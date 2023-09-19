@@ -1,0 +1,306 @@
+form {
+  position: relative;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 3px;
+  color: white;
+  padding: 5px 10px;
+  font-size: 16px;
+  line-height: 18px;
+  background: transparent;
+  outline: none;
+  transition: @transition-fast-ease;
+
+  @media @query-min-smallDevice {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &:focus {
+    box-shadow: 0px 3px 6px @color-block-shadow;
+  }
+
+  &::placeholder {
+    color: white;
+  }
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 3px;
+  color: black;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 18px;
+  background: transparent;
+  outline: none;
+  transition: @transition-fast-ease;
+  resize: none;
+
+  @media @query-min-smallDevice {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &:focus {
+    box-shadow: 0px 3px 6px @color-block-shadow;
+  }
+
+  &::placeholder {
+    color: black;
+  }
+}
+
+input[type="submit"],
+button[type="submit"] {
+  padding: 12px 20px;
+  background: @color__blue;
+  box-shadow: 0px 3px 6px @color-block-shadow;
+  color: white;
+  text-transform: uppercase;
+  font-size: 17px;
+  line-height: 20px;
+  border-radius: 3px;
+  transition: all @transition-fast-ease;
+
+  @media @query-min-smallDevice {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &:hover {
+    transform: scale(1.025);
+    box-shadow: 0px 5px 9px @color-block-shadow;
+  }
+}
+
+.form__container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .wpcf7{
+    width: 100%;
+  }
+}
+
+.earning {
+  display: flex;
+}
+
+.form__item {
+  position: relative;
+  margin-bottom: 20px;
+  //flex: 1 0 auto;
+
+  .earning &:not(:last-of-type) {
+    margin-right: 20px;
+  }
+
+  &.two-column {
+    display: flex;
+
+    .calculator__result {
+      margin-left: 15px;
+    }
+
+    .discussion {
+      width: 100%;
+    }
+
+    .mail {
+      flex: 1 0 auto;
+      margin-right: 20px;
+    }
+
+    .phone {
+      flex: 1 0 auto;
+    }
+  }
+
+  .wpcf7-list-item {
+    margin: 0;
+  }
+
+  .wpcf7-not-valid-tip {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    font-size: 13px;
+  }
+}
+
+input[type="checkbox"] {
+  display: none;
+
+  &:checked + .wpcf7-list-item-label,
+  &:checked + label {
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  + .wpcf7-list-item-label,
+  + label {
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    padding-left: 30px;
+    cursor: pointer;
+
+    @media @query-min-smallDevice {
+      font-size: 20px;
+      line-height: 24px;
+      padding-left: 38px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 5px;
+      border: 1px solid white;
+
+      @media @query-min-smallDevice {
+        width: 23px;
+        height: 23px;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 4px;
+      left: 4px;
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+      background: @color__blue;
+      opacity: 0;
+      transition: @transition-fast-ease;
+
+      @media @query-min-smallDevice {
+        top: 4px;
+        left: 4px;
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+}
+
+.wpcf7 form div.wpcf7-response-output {
+  margin: 0;
+  padding: 15px 20px;
+  border: 0;
+  font-size: 14px;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output {
+  border-color: @color__main;
+}
+
+input[disabled='disabled'] {
+  background-color: gray;
+}
+
+select {
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 3px;
+  color: white;
+  padding: 5px 10px;
+  font-size: 16px;
+  line-height: 18px;
+  background: transparent;
+  outline: none;
+  transition: @transition-fast-ease;
+  -webkit-appearance: none;
+
+  @media @query-min-smallDevice {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &:focus {
+    box-shadow: 0px 3px 6px #00000029;
+  }
+
+  &::placeholder {
+    color: white;
+  }
+
+  option {
+    background-color: @color__main__dark;
+  }
+}
+
+.form-error {
+  color: white;
+  background-color: @color__main__dark;
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin: 10px 0;
+}
+
+.select2 {
+  &-results {
+    &__group {
+      font-size: 11px;
+    }
+
+    &__option {
+      font-size: 11px;
+    }
+
+    @media @query-min-smallDevice {
+      &__group {
+        font-size: 16px;
+      }
+
+      &__option {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.wpcf7-form {
+  p {
+    margin-bottom: 15px !important;
+    font-size: 20px;
+    line-height: 24px;
+    width: 100%;
+  }
+
+  .form__item {
+    &:nth-of-type(3) {
+      flex-basis: 100%;
+
+      @media @query-min-smallDevice {
+        flex-basis: 44%;
+      }
+    }
+
+    &:nth-of-type(4) {
+      flex-basis: 100%;
+      margin-bottom: 20px;
+
+      @media @query-min-smallDevice {
+        flex-basis: 50%;
+      }
+    }
+  }
+}

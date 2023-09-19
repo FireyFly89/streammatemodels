@@ -1,0 +1,44 @@
+// variable structure to follow: @{element-name}-{type}-{modifier}: value(s);
+// Paths (relative to style.css)
+@path-fonts: "./assets/fonts/";
+
+// Colours
+@color__blue: #147BD1;
+@color__blue__light: #93C9FF;
+@color__main: #EB6FBD;
+@color__main__light: #F4A6D7;
+@color__main__verylight: #FAD3EB;
+@color__main__dark: #9A2169;
+@color__orange: #FFA300;
+@color__orange__light: #FDCC68;
+@color__body__bg: #FFEFF9;
+@color-block-shadow: rgba(0,0,0,0.16);
+
+// Fonts
+@font-helvetica: 'HelveticaNeueRegular';
+
+// Sizes
+@body-max-width: 1350px;
+
+// Animation timings
+@transition-fast-ease: 300ms ease;
+@transition-medium-ease: 500ms ease;
+@transition-slow-ease: 800ms ease;
+
+// Media query sizes
+@hd-device-res: 1600px; // desktop 3
+@hdReady-device-res: 1366px; // desktop 2
+@large-device-res: 1200px; // desktop 1
+@medium-device-res: 992px; // tablet
+@small-device-res: 768px; // mobile 1
+@extraSmall-device-res: 480px; // mobile 2
+@old-device-res: 375px; // mobile 3 (iphone 6, etc)
+
+// Media query shorthands (mobile first only)
+@query-min-hd: ~"(min-width: @{hd-device-res})";
+@query-min-hdReady: ~"(min-width: @{hdReady-device-res})";
+@query-min-largeDevice: ~"(min-width: @{large-device-res})";
+@query-min-mediumDevice: ~"(min-width: @{medium-device-res})";
+@query-min-smallDevice: ~"(min-width: @{small-device-res})";
+@query-min-extraSmallDevice: ~"(min-width: @{extraSmall-device-res})";
+@query-min-oldDevice: ~"(min-width: @{old-device-res})";
